@@ -1,6 +1,5 @@
 <script>
 	import Footer from './Footer.svelte';
-	import Main from './Main.svelte';
 	import Header from './Header.svelte';
 	import './styles.css';
 </script>
@@ -8,7 +7,9 @@
 <div class="app">
 	<Header />
 
-	<Main/>
+	<main>
+		<slot />
+	</main>
 
 	<Footer/>
 </div>
@@ -20,7 +21,7 @@
 		min-height: 100vh;
 	}
 
-	/* main {
+	main {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
@@ -31,7 +32,7 @@
 		box-sizing: border-box;
 	}
 
-	footer {
+	/* footer {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -41,11 +42,11 @@
 
 	footer a {
 		font-weight: bold;
-	}
+	} 
 
 	@media (min-width: 480px) {
 		footer {
 			padding: 12px 0;
 		}
-	} */
+	}*/
 </style>
